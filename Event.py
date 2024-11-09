@@ -3,7 +3,7 @@ class Event:
         self.name = name
         self.date = date
         self.location = location
-        self.participants = 0
+        self.participant_count = 0
         
     def add_participant(self):
         self.participant_count += 1
@@ -30,7 +30,7 @@ while True:
         elif action == 'add participant':
             event_name = input("Enter event name: ")
             event.add_participant()
-            print(event.get_participant_count())
+            print(f"Participant added to {event_name}")
                        
         elif action == 'display':
             for event in events.values():
